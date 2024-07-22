@@ -65,7 +65,7 @@ const Encryptor: React.FC = () => {
       <Toaster richColors/>
       <div className="max-w-10xl mx-500 flex flex-col flex-grow">
         <header className="mb-6">
-          <img src="/logo.png" alt="Logo" className="w-auto h-8" />
+          <img src="../../public/logo.png" alt="Logo" className="w-auto h-8" />
         </header>
         <main className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6 flex-grow">
           <div className="flex-grow flex flex-col bg-white rounded-lg shadow-lg p-6">
@@ -113,7 +113,7 @@ const Encryptor: React.FC = () => {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center h-full">
-                <img src="/muñeco.png" alt="Ningún mensaje" className="w-64 h-auto mb-4" />
+                <img src="../../public/muñeco.png" alt="Ningún mensaje" className="w-64 h-auto mb-4" />
                 <h2 className="text-2xl font-bold text-center mb-4">
                   Ningún mensaje fue encontrado
                 </h2>
@@ -125,8 +125,8 @@ const Encryptor: React.FC = () => {
           </aside>
         </main>
       </div>
-      
     </div>
+    
   );
 };
 
