@@ -13,6 +13,7 @@ import Footer from "../components/footer.astro";
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <script src="../scripts/script.ts"></script>
   </head>
   <body class="bg-gray-100 flex flex-col min-h-screen">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
@@ -94,68 +95,5 @@ import Footer from "../components/footer.astro";
         color: #0a3871;
       }
     </style>
-    <script>
-      import { encriptar } from "../lib/encriptador";
-      import { desencriptar } from "../lib/encriptador";
-
-      function encriptarTexto() {
-        const inputText = document.getElementById(
-          "inputText"
-        ) as HTMLTextAreaElement;
-        const outputText = document.getElementById(
-          "outputText"
-        ) as HTMLTextAreaElement;
-        const emptyState = document.getElementById("emptyState");
-        const resultState = document.getElementById("resultState");
-
-        if (inputText && outputText && emptyState && resultState) {
-          const textoEncriptado = encriptar(inputText.value);
-          outputText.value = textoEncriptado;
-
-          emptyState.classList.add("hidden");
-          resultState.classList.remove("hidden");
-        }
-      }
-
-      function desencriptarTexto() {
-        const inputText = document.getElementById(
-          "inputText"
-        ) as HTMLTextAreaElement;
-        const outputText = document.getElementById(
-          "outputText"
-        ) as HTMLTextAreaElement;
-        const emptyState = document.getElementById("emptyState");
-        const resultState = document.getElementById("resultState");
-
-        if (inputText && outputText && emptyState && resultState) {
-          const textoDesencriptado = desencriptar(inputText.value);
-          outputText.value = textoDesencriptado;
-
-          emptyState.classList.add("hidden");
-          resultState.classList.remove("hidden");
-        }
-      }
-
-      function copiarTexto() {
-        const outputText = document.getElementById(
-          "outputText"
-        ) as HTMLTextAreaElement;
-        if (outputText) {
-          outputText.select();
-          document.execCommand("copy");
-          alert("Texto copiado al portapapeles");
-        }
-      }
-
-      document
-        .getElementById("encriptarBtn")
-        ?.addEventListener("click", encriptarTexto);
-      document
-        .getElementById("desencriptarBtn")
-        ?.addEventListener("click", desencriptarTexto);
-      document
-        .getElementById("copyBtn")
-        ?.addEventListener("click", copiarTexto);
-    </script>
   </body>
 </html>
