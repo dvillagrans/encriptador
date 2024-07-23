@@ -7,7 +7,10 @@ Este repositorio contiene un proyecto de encriptador de texto desarrollado como 
 
 - Debe funcionar solo con letras minúsculas.
 - No deben utilizarse letras con acentos ni caracteres especiales.
-- Debe ser posible convertir una palabra en su versión encriptada y también devolver una palabra encriptada a su versión original.## 🔩 Funcionamiento
+- Debe ser posible convertir una palabra en su versión encriptada y también devolver una palabra encriptada a su versión original.
+-
+
+## 🔩 Funcionamiento
 
 ### 🔒 Encriptación
 
