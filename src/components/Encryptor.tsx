@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { Toaster, toast } from 'sonner';
+import Logo from '../icons/logo';
+import Muneco from '../icons/muneco';
 
 const encriptar = (text: string): string => {
   const replacements: Record<string, string> = {
@@ -61,17 +63,17 @@ const Encryptor: React.FC = () => {
   }, [output]);
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-screen bg-gray-100 flex flex-col">
-      <Toaster richColors/>
-      <div className="max-w-10xl mx-500 flex flex-col flex-grow">
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Toaster richColors />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow flex flex-col">
         <header className="mb-6">
-          <img src="../../public/logo.png" alt="Logo" className="w-auto h-8" />
+          <Logo />
         </header>
         <main className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6 flex-grow">
           <div className="flex-grow flex flex-col bg-white rounded-lg shadow-lg p-6">
             <textarea
               className="w-full flex-grow p-4 bg-transparent rounded-md resize-none mb-4 text-blue-900 text-lg focus:outline-none"
-              placeholder="Ingrese el texto aqui"
+              placeholder="Ingrese el texto aquí"
               value={input}
               onChange={handleInputChange}
               style={{ minHeight: '200px' }} // Asegura una altura mínima
@@ -113,7 +115,7 @@ const Encryptor: React.FC = () => {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center h-full">
-                <img src="../../public/muñeco.png" alt="Ningún mensaje" className="w-64 h-auto mb-4" />
+                <Muneco />
                 <h2 className="text-2xl font-bold text-center mb-4">
                   Ningún mensaje fue encontrado
                 </h2>
@@ -125,8 +127,30 @@ const Encryptor: React.FC = () => {
           </aside>
         </main>
       </div>
+      <footer className="bg-gray-800 text-white py-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+          <p className="mr-4">
+            Created with <span className="text-red-500">❤</span> by Diego Villagrán
+          </p>
+          <a
+            href="https://github.com/dvillagrans"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-2"
+          >
+            <i className="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="www.linkedin.com/in/dvillagrans"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-2"
+          >
+            <i className="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </footer>
     </div>
-    
   );
 };
 
