@@ -10,7 +10,7 @@ const Logo = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <image
-        href="/logo.png"
+        href="https://i.postimg.cc/X7cYnw6K/logo.png"
         x="0"
         y="0"
         height="120"

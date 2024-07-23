@@ -10,7 +10,7 @@ const Muneco = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <image
-        href="/muñeco.png"
+        href="https://i.postimg.cc/4xfNymXD/mu-eco.png"
         x="0"
         y="0"
         height="120"
